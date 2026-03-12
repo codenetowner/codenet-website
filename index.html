@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codenet | Transform Ideas into Reality</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+Arabic:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #0f172a;
+            --accent: #3b82f6;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .rtl {
+            direction: rtl;
+        }
+
+        .lang-switch-btn {
+            transition: all 0.3s ease;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-600">CODENET</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center" id="nav-links">
+                    <a href="#services" class="text-slate-600 hover:text-blue-600 font-medium transition-colors" data-en="Services" data-ar="خدماتنا">Services</a>
+                    <a href="#solutions" class="text-slate-600 hover:text-blue-600 font-medium transition-colors" data-en="Solutions" data-ar="حلولنا">Solutions</a>
+                    <a href="#about" class="text-slate-600 hover:text-blue-600 font-medium transition-colors" data-en="About Us" data-ar="من نحن">About Us</a>
+                    <button onclick="toggleLanguage()" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-all lang-switch-btn shadow-md">
+                        <span id="lang-text">العربية</span>
+                    </button>
+                </div>
+                <!-- Mobile Toggle -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleLanguage()" class="text-blue-600 font-bold px-2">
+                        <span id="lang-text-mobile">AR</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 space-y-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight" id="hero-title">
+                    Transforming Ideas into <span class="text-blue-400 text-gradient">Profitable Ventures</span>
+                </h1>
+                <p class="text-lg text-slate-300 leading-relaxed" id="hero-desc">
+                    Have an idea? Our team can turn it into a real business. We design and develop custom software and help build companies from the ground up.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg" id="hero-cta">Get Started</a>
+                    <a href="#solutions" class="border border-slate-600 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all" id="hero-sec-cta">View Solutions</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <div class="relative">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-lg blur opacity-25"></div>
+                    <div class="relative bg-slate-900 rounded-2xl p-4 shadow-2xl overflow-hidden">
+                         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800" alt="Tech Team Working" class="rounded-xl opacity-90">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features / Partners -->
+    <section id="services" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Experts -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 card-hover shadow-sm">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-users-cog text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" id="feat-1-title">Diverse Expert Team</h3>
+                    <p class="text-slate-600" id="feat-1-desc">Accountants, marketers, testers, and full-stack developers working together to bring your vision to life.</p>
+                </div>
+                <!-- Support -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 card-hover shadow-sm">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" id="feat-2-title">24/7 Premium Support</h3>
+                    <p class="text-slate-600" id="feat-2-desc">We provide support every day of the week to ensure your business operations run smoothly without interruption.</p>
+                </div>
+                <!-- Third Party -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 card-hover shadow-sm">
+                    <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4" id="feat-3-title">Strategic Partnership</h3>
+                    <p class="text-slate-600" id="feat-3-desc">We act as a third-party partner, providing specialized professionals to work as an integrated part of your company.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 px-4 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" id="sol-title">Comprehensive Solutions for All Sizes</h2>
+                <div class="h-1 w-24 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Shops -->
+                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-slate-100">
+                    <span class="text-blue-600 font-bold uppercase tracking-wider mb-4 block" id="sol-1-label">For Retail & Shops</span>
+                    <h3 class="text-2xl font-bold mb-6" id="sol-1-title">Scale Your Local Business</h3>
+                    <ul class="space-y-4 text-slate-600 mb-8" id="sol-1-list">
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Full Inventory & POS Management</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Personal Online Store & Marketplace Presence</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Multi-Platform Listing (Amazon/Shein Style)</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Seamless Delivery Integration</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle text-blue-500 mt-1"></i> Mobile App for Business Owners</li>
+                    </ul>
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=600" class="rounded-2xl shadow-md" alt="Modern Shop">
+                </div>
+
+                <!-- Industrial -->
+                <div class="bg-slate-900 text-white p-8 md:p-12 rounded-3xl shadow-xl">
+                    <span class="text-blue-400 font-bold uppercase tracking-wider mb-4 block" id="sol-2-label">Enterprise & Industry</span>
+                    <h3 class="text-2xl font-bold mb-6" id="sol-2-title">Large-Scale Operations</h3>
+                    <ul class="space-y-4 text-slate-300 mb-8" id="sol-2-list">
+                        <li class="flex items-start gap-3"><i class="fas fa-layer-group text-blue-400 mt-1"></i> Multi-Warehouse & Multi-Branch Management</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-sync text-blue-400 mt-1"></i> Real-time Stock Movement Tracking</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-truck text-blue-400 mt-1"></i> Driver & Fleet Management App</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-chart-line text-blue-400 mt-1"></i> Advanced Financial & Sales Analytics</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-users text-blue-400 mt-1"></i> Salesperson & Representative App</li>
+                    </ul>
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=600" class="rounded-2xl opacity-80" alt="Warehouse Management">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="text-2xl font-bold text-blue-600 mb-6">CODENET</div>
+            <p class="text-slate-500 mb-8 max-w-md mx-auto" id="footer-text">Helping businesses transform through technology. 24/7 dedicated support.</p>
+            <div class="flex justify-center space-x-6 mb-8 rtl:space-x-reverse">
+                <a href="#" class="text-slate-400 hover:text-blue-600 text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-slate-400 hover:text-blue-600 text-2xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-slate-400 hover:text-blue-600 text-2xl"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="text-slate-400 text-sm">© 2024 Codenet. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = 'en';
+
+        const translations = {
+            en: {
+                nav: ["Services", "Solutions", "About Us"],
+                langBtn: "العربية",
+                heroTitle: 'Transforming Ideas into <span class="text-blue-400">Profitable Ventures</span>',
+                heroDesc: "Have an idea? Our team can turn it into a real business. We design and develop custom software and help build companies from the ground up.",
+                heroCta: "Get Started",
+                heroSecCta: "View Solutions",
+                feat1Title: "Diverse Expert Team",
+                feat1Desc: "Accountants, marketers, testers, and full-stack developers working together to bring your vision to life.",
+                feat2Title: "24/7 Premium Support",
+                feat2Desc: "We provide support every day of the week to ensure your business operations run smoothly without interruption.",
+                feat3Title: "Strategic Partnership",
+                feat3Desc: "We act as a third-party partner, providing specialized professionals to work as an integrated part of your company.",
+                solTitle: "Comprehensive Solutions for All Sizes",
+                sol1Label: "For Retail & Shops",
+                sol1Title: "Scale Your Local Business",
+                sol1List: [
+                    "Full Inventory & POS Management",
+                    "Personal Online Store & Marketplace Presence",
+                    "Multi-Platform Listing (Amazon/Shein Style)",
+                    "Seamless Delivery Integration",
+                    "Mobile App for Business Owners"
+                ],
+                sol2Label: "Enterprise & Industry",
+                sol2Title: "Large-Scale Operations",
+                sol2List: [
+                    "Multi-Warehouse & Multi-Branch Management",
+                    "Real-time Stock Movement Tracking",
+                    "Driver & Fleet Management App",
+                    "Advanced Financial & Sales Analytics",
+                    "Salesperson & Representative App"
+                ],
+                footer: "Helping businesses transform through technology. 24/7 dedicated support."
+            },
+            ar: {
+                nav: ["خدماتنا", "حلولنا", "من نحن"],
+                langBtn: "English",
+                heroTitle: 'حوّل أفكارك إلى <span class="text-blue-400">مشاريع رابحة</span>',
+                heroDesc: "هل لديك فكرة؟ فريقنا يمكنه تحويلها إلى عمل حقيقي. نقوم بتصميم وتطوير برامج مخصصة، ونساعد في بناء الشركات من الصفر لتحويل الأفكار إلى واقع.",
+                heroCta: "ابدأ الآن",
+                heroSecCta: "عرض الحلول",
+                feat1Title: "فريق خبراء متكامل",
+                feat1Desc: "يضم فريقنا محاسبين، مسوقين، مختبري أنظمة، ومطوري برمجيات يعملون معاً لتحويل رؤيتك إلى حقيقة.",
+                feat2Title: "دعم متميز 24/7",
+                feat2Desc: "نقدم دعماً على مدار الساعة طوال أيام الأسبوع لضمان سير أعمالك بسلاسة ودون انقطاع.",
+                feat3Title: "شريك استراتيجي",
+                feat3Desc: "يمكن لشركتنا العمل كشريك خارجي، حيث نوفر فريقنا للعمل كجزء متكامل من شركتكم عند الحاجة.",
+                solTitle: "حلول شاملة للأعمال بجميع أحجامها",
+                sol1Label: "للمتاجر والتجزئة",
+                sol1Title: "نمو تجارتك المحلية",
+                sol1List: [
+                    "إدارة كاملة للمخزون ونقاط البيع",
+                    "متجر إلكتروني خاص وحضور في السوق",
+                    "عرض المنتجات على منصتنا (مثل أمازون وشي إن)",
+                    "تكامل سلس مع جميع شركات التوصيل",
+                    "تطبيق خاص لصاحب العمل للمتابعة الفورية"
+                ],
+                sol2Label: "القطاعات الكبرى والمصانع",
+                sol2Title: "عمليات واسعة النطاق",
+                sol2List: [
+                    "إدارة المخازن والفروع المتعددة بسهولة",
+                    "متابعة حركة المخزون بين الفروع لحظياً",
+                    "تطبيق خاص لإدارة السائقين والأسطول",
+                    "تحليلات مالية ومبيعات متقدمة",
+                    "تطبيق خاص بالمندوبين وفرق المبيعات"
+                ],
+                footer: "نساعد الشركات على التحول الرقمي من خلال التكنولوجيا. دعم فني مخصص على مدار الساعة."
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            const data = translations[currentLang];
+
+            // Set Direction
+            document.body.classList.toggle('rtl', currentLang === 'ar');
+            document.documentElement.lang = currentLang;
+
+            // Update Nav
+            const navElements = document.querySelectorAll('#nav-links a');
+            navElements.forEach((el, i) => el.innerText = data.nav[i]);
+            document.getElementById('lang-text').innerText = data.langBtn;
+            document.getElementById('lang-text-mobile').innerText = currentLang === 'en' ? 'AR' : 'EN';
+
+            // Update Hero
+            document.getElementById('hero-title').innerHTML = data.heroTitle;
+            document.getElementById('hero-desc').innerText = data.heroDesc;
+            document.getElementById('hero-cta').innerText = data.heroCta;
+            document.getElementById('hero-sec-cta').innerText = data.heroSecCta;
+
+            // Update Features
+            document.getElementById('feat-1-title').innerText = data.feat1Title;
+            document.getElementById('feat-1-desc').innerText = data.feat1Desc;
+            document.getElementById('feat-2-title').innerText = data.feat2Title;
+            document.getElementById('feat-2-desc').innerText = data.feat2Desc;
+            document.getElementById('feat-3-title').innerText = data.feat3Title;
+            document.getElementById('feat-3-desc').innerText = data.feat3Desc;
+
+            // Update Solutions
+            document.getElementById('sol-title').innerText = data.solTitle;
+            document.getElementById('sol-1-label').innerText = data.sol1Label;
+            document.getElementById('sol-1-title').innerText = data.sol1Title;
+            document.getElementById('sol-2-label').innerText = data.sol2Label;
+            document.getElementById('sol-2-title').innerText = data.sol2Title;
+
+            // Update Lists
+            const updateList = (id, list) => {
+                const el = document.getElementById(id);
+                const icon = id.includes('sol-1') ? 'fa-check-circle text-blue-500' : 'fa-layer-group text-blue-400';
+                el.innerHTML = list.map(item => `<li class="flex items-start gap-3"><i class="fas ${icon} mt-1"></i> ${item}</li>`).join('');
+            };
+            updateList('sol-1-list', data.sol1List);
+            updateList('sol-2-list', data.sol2List);
+
+            document.getElementById('footer-text').innerText = data.footer;
+        }
+    </script>
+</body>
+</html>
